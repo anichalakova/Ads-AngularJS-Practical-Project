@@ -1,29 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Creating Routes</title>
-	<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css" />
-	<link rel="stylesheet" href="lib/bootstrap/bootstrap-theme.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/app.css" />
+    <meta charset="UTF-8"/>
+    <title>Ani's Ads</title>
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="lib/bootstrap/bootstrapSandstone.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
 </head>
-<body ng-app="softUniApp">
-	<div class="container">
-		<div class="navbar">
-			<ul class="nav">
-				<li><a href="#/newAd">New Ad</a></li>
-				<li><a href="#/ads">All Ads</a></li>
-			</ul>
-		</div>
+<body ng-app='ads' ng-controller="MainController">
+    <div class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand">Ani's Ads</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">            
+                <li>
+                    <a href="#">Login</a>
+                </li>
+                <li>
+                    <a href="#">Register</a>
+                </li>
+                <li>
+                    <a href="#" id="download">Download</a>             
+            </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class ='md-col-3'>{{name}}</div>
+            <div class ='md-col-7'>Second Column</div>
+            <div class ='md-col-2'>Third Column</div>
+        </div>
+    </div>
 
-		<ng-view></ng-view>
-	</div>
-
-	<script src="lib/angular/angular.js"></script>
-	<script src="lib/angular/angular-route.js"></script>
+	<script src="lib/angular/angular.js"></script><!--
+-->	<script src="lib/angular/angular-route.js"></script><!--
 	<script src="lib/angular/angular-resource.js"></script>
-	<script src="js/app.js"></script>
+-->	<script src="js/app.js"></script><!--
 	<script src="js/services/adsData.js"></script>
 	<script src="js/controllers/NewAdController.js"></script>
-	<script src="js/controllers/AllAdsController.js"></script>
+	<script src="js/controllers/AllAdsController.js"></script>-->
+        <script type='text/javascript' src='js/controllers/MainController.js'></script>
 </body>
 </html>
