@@ -6,7 +6,6 @@ ul {
     list-style: none
 }
 
-.ad-image {
-    height: 100px;
-    width: 100px;
+.ad-image {    
+    width: 150px;
 }
