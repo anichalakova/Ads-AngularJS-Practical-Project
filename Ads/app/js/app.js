@@ -6,5 +6,5 @@ var app = angular.module('ads', ['ngRoute'])
                 templateUrl: '/templates/login.html', controller: 'MainController' });
             $routeProvider.when('/ads', {
                 templateUrl: '/templates/all-ads.html', controller: 'MainController' });
-            $routeProvider.otherwise({redirectTo: '/ads'});
+            $routeProvider.otherwise({redirectTo: '/ads'})
         });
