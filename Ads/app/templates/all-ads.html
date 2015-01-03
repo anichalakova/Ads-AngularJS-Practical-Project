@@ -1,0 +1,28 @@
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-8">
+            <ul>
+                <li ng-repeat="item in data.ads">
+                    <div class="container well">
+                        <h3 class="pull-left">
+                            {{item.title}}                           
+                        </h3>
+                            <span class="pull-right">
+                                   {{item.date | date: 'd-MMM-yyyy'}}
+                            </span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img class="ad-image" src="" ng-src="{{item.imageDataUrl}}">
+                        </div>
+                        <div class="col-md-7">
+                            {{item.text}}
+                        </div>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="col-md-4">Filters</div>
+    </div>
+</div>
