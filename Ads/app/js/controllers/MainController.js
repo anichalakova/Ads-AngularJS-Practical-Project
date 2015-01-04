@@ -10,4 +10,13 @@ app.controller('MainController', function($scope, mainData){
     mainData.getAllCategories(function(resp){
         $scope.categories = resp;
     });
+    
+    $scope.selectedCatId = null;
+    $scope.selectedTownId = null;
+    $scope.setSelectedCat = function (selectedId) {
+       $scope.selectedCatId = selectedId;
+    };
+        $scope.setSelectedTown = function (selectedId) {
+       $scope.selectedTownId = selectedId;
+    };
 });

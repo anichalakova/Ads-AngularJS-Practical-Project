@@ -28,7 +28,10 @@
                 <div class="panel-heading">
                   <h3 class="panel-title">Categories</h3>
                 </div>
-                <div class="panel-body" ng-repeat="category in categories">
+                <div class="panel-body italic" ng-click="setSelectedCat(null)" ng-class="{selected: selectedCatId === null}">
+                  All
+                </div>
+                <div class="panel-body" ng-click="setSelectedCat(category.id)" ng-class="{selected: category.id === selectedCatId}" ng-repeat="category in categories">
                   {{category.name}}
                 </div>
               </div>
@@ -36,7 +39,10 @@
                 <div class="panel-heading">
                   <h3 class="panel-title">Towns</h3>
                 </div>
-                <div class="panel-body" ng-repeat="town in towns">
+                  <div class="panel-body italic" ng-click="setSelectedTown(null)" ng-class="{selected: selectedTownId === null}">
+                  All
+                </div>
+                <div class="panel-body" ng-click="setSelectedTown(town.id)" ng-class="{selected: town.id === selectedTownId}" ng-repeat="town in towns">
                   {{town.name}}
                 </div>
               </div>
