@@ -1,26 +1,39 @@
 * {
     box-sizing: border-box;
+    color: #333 !important;
 }
 
-
-
-/*div, .container {
+/*div{
     border: 1px solid black;
 }*/
+
+.wrapper {
+    margin-top: 65px;
+}
+
 .row {
     margin: 0;
     padding: 0;
 }
 
+.fixed-sidebar {
+    position: fixed;
+    
+} 
+
 .ads-holder {
     margin: 0;
-    padding: 0;    
+    padding: 0; 
 
+}
+.container {
+    width: 100%;
 }
 
 .item {
-    background-color: #93C54B;
+    background-color: 		#A3DAA3;
     margin-bottom: 15px;
+    border-radius: 5px;
 }
 
 .user-data p {
@@ -71,6 +84,11 @@ ul {
     font-style: italic;
 }
 
+.panel-heading {
+    background-color: 	#A3DAA3 !important; 
+    
+}
+
 .selected {
-    background-color: orangered;
+    background-color: 			#FFB482;
 }

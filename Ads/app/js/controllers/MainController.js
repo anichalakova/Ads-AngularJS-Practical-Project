@@ -11,11 +11,14 @@ app.controller('MainController', function($scope, mainData){
         $scope.categories = resp;
     });
     
+    $scope.selectedNavId = null;
+    
     $scope.selectedCatId = null;
-    $scope.selectedTownId = null;
     $scope.setSelectedCat = function (selectedId) {
        $scope.selectedCatId = selectedId;
     };
+    
+    $scope.selectedTownId = null;
         $scope.setSelectedTown = function (selectedId) {
        $scope.selectedTownId = selectedId;
     };
