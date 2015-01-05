@@ -31,7 +31,7 @@
 }
 
 .item {
-    background-color: 		#A3DAA3;
+    background-color: #A3DAA3;
     margin-bottom: 15px;
     border-radius: 5px;
 }
@@ -90,5 +90,27 @@ ul {
 }
 
 .selected {
-    background-color: 			#FFB482;
+    background-color: #FFB482;
+}
+
+.well {
+    background-color: #A3DAA3;
+}
+
+button[type="submit"] {
+    background-color: #FFB482;
+    border-color: #ADADAD;
+}
+
+button[type="submit"]:hover{
+    background-color: #FF5930;
+    border-color: #ADADAD;
+}
+
+a:link {
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;    
 }

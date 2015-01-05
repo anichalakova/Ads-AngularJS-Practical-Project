@@ -4,39 +4,59 @@
             <div class="well bs-component">
               <form class="form-horizontal">
                 <fieldset>
-                  <legend>User Registration</legend>
-                  <div class="form-group">
-                    <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-                    <div class="col-lg-10">
-                      <input type="text" class="form-control" id="inputEmail" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-                    <div class="col-lg-10">
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    <legend>User Registration</legend> 
+                    
+                        <div class="form-group">
+                            <div class="col-lg-6">
+                                <label for="inputUsername" class="control-label">Username</label>
+                                <input type="text" class="form-control" id="inputUsername" placeholder="Username">
+                            </div>                            
+                        </div>     
+                      <div class="form-group">
+                            <div class="col-lg-6">
+                                <label for="inputPass" class="control-label">Password</label>
+                                <input type="password" class="form-control" id="inputPass" placeholder="Password">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="inputPassConf" class="control-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="inputPassConf" placeholder="Confirm Password">
+                            </div>
+                        </div> 
+                        <div class="form-group">
+                            <div class="col-lg-6">
+                                <label for="inputName" class="control-label">Name</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="Name">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="inputEmail" class="control-label">Email</label>
+                                <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                            </div>
+                        </div> 
+                        <div class="form-group">
+                            <div class="col-lg-6">
+                                <label for="inputPhone" class="control-label">Phone</label>
+                                <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="selectTown" class="control-label">Town</label>
+                                  <select class="form-control" id="selectTown">
+                                    <option>Sofia</option>
+                                    <option>Other</option>                      
+                                  </select>
+                            </div>
+                        </div> 
+                            
+                            
+                        
                   
-                    </div>
-                  </div>
-               
-             
                   <div class="form-group">
-                    <label for="select" class="col-lg-2 control-label">Selects</label>
-                    <div class="col-lg-10">
-                      <select class="form-control" id="select">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
+                   <div class="col-lg-6">
+                       <button type="submit" class="btn btn-primary">Register</button>
+                      
                     </div>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-lg-10 col-lg-offset-2">
-                      <button class="btn btn-default">Cancel</button>
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                    </div>
+                        <div class="col-lg-6">
+                            <a href="#/login">Login here</a>   
+                    </div>                      
                   </div>
                 </fieldset>
               </form>

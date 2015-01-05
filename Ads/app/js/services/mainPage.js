@@ -28,6 +28,10 @@ app.factory('mainData', function($http, $log){
                     .error(function(data, status, headers, config){
                         $log.warn(data);
                     });
+        },
+        
+        register: function(success) {
+            $http ({method: 'POST', url: 'http://softuni-ads.azurewebsites.net/api/user/register', username})
         }
     };
     
