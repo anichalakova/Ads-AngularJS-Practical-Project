@@ -1,4 +1,6 @@
-app.controller('MainController', function($scope, mainData){   
+app.controller('HomeController', function($scope, mainData){   
+    
+    $scope.pageTitle = 'Home';
     mainData.getAllAds(function(resp){
         $scope.data = resp;
     });
