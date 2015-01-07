@@ -1,67 +1,65 @@
-<div class="bs-docs-section">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="well bs-component">
-          <form class="form-horizontal">
-            <fieldset>
-                <legend>User Registration</legend> 
-
-                    <div class="form-group">
-                        <div class="col-lg-6">
-                            <label for="inputUsername" class="control-label">Username</label>
-                            <input type="text" class="form-control" id="inputUsername" placeholder="Username">
-                        </div>                            
-                    </div>     
-                  <div class="form-group">
-                        <div class="col-lg-6">
-                            <label for="inputPass" class="control-label">Password</label>
-                            <input type="password" class="form-control" id="inputPass" placeholder="Password">
-                        </div>
-                        <div class="col-lg-6">
-                            <label for="inputPassConf" class="control-label">Confirm Password</label>
-                            <input type="password" class="form-control" id="inputPassConf" placeholder="Confirm Password">
-                        </div>
-                    </div> 
-                    <div class="form-group">
-                        <div class="col-lg-6">
-                            <label for="inputName" class="control-label">Name</label>
-                            <input type="text" class="form-control" id="inputName" placeholder="Name">
-                        </div>
-                        <div class="col-lg-6">
-                            <label for="inputEmail" class="control-label">Email</label>
-                            <input type="text" class="form-control" id="inputEmail" placeholder="Email">
-                        </div>
-                    </div> 
-                    <div class="form-group">
-                        <div class="col-lg-6">
-                            <label for="inputPhone" class="control-label">Phone</label>
-                            <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
-                        </div>
-                        <div class="col-lg-6">
-                            <label for="selectTown" class="control-label">Town</label>
-                              <select class="form-control" id="selectTown">
-                                <option>Sofia</option>
-                                <option>Other</option>                      
-                              </select>
-                        </div>
-                    </div> 
-
-
-
-
-              <div class="form-group">
-               <div class="col-lg-6">
-                   <button type="submit" class="btn btn-primary">Register</button>
-
-                </div>
-                    <div class="col-lg-6">
-                        <a href="#/login">Login here</a>   
-                </div>                      
-              </div>
-            </fieldset>
-          </form>
-        </div>
-      </div>
-      </div>
+<div class="register">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container title-bar">        
+            <a href="../" class="navbar-brand">Ani's Ads - {{pageTitle}}</a>
+         </div>
     </div>
-      
+    <div class="bs-docs-section">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="well bs-component">
+              <form class="form-horizontal">
+                <fieldset>
+                    <legend>User Registration</legend> 
+                        <div class="form-group">
+                            <div class="col-lg-6">
+                                <label for="inputUsername" class="control-label">Username</label>
+                                <input type="text" class="form-control" id="inputUsername" placeholder="Username"  ng-model="user.username">
+                            </div>                            
+                        </div>     
+                        <div class="form-group">
+                            <div class="col-lg-6">
+                                <label for="inputPass" class="control-label">Password</label>
+                                <input type="password" class="form-control" id="inputPass" placeholder="Password"  ng-model="user.password">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="inputPassConf" class="control-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="inputPassConf" placeholder="Confirm Password">
+                            </div>
+                        </div> 
+                        <div class="form-group">
+                            <div class="col-lg-6">
+                                <label for="inputName" class="control-label">Name</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="Name"  ng-model="user.name">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="inputEmail" class="control-label">Email</label>
+                                <input type="text" class="form-control" id="inputEmail" placeholder="Email"  ng-model="user.email">
+                            </div>
+                        </div> 
+                        <div class="form-group">
+                            <div class="col-lg-6">
+                                <label for="inputPhone" class="control-label">Phone</label>
+                                <input type="text" class="form-control" id="inputPhone" placeholder="Phone"  ng-model="user.phone">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="selectTown" class="control-label">Town</label>
+                                <select class="form-control" id="selectTown" ng-options="town.id as town.name for town in towns" ng-model="user.TownId">
+                                  </select>
+                            </div>
+                        </div> 
+                        <div class="form-group">
+                            <div class="col-lg-6">
+                               <button type="submit" class="btn btn-primary" ng-click="register(user)">Register</button>
+                            </div>
+                            <div class="col-lg-6">
+                                <a href="#/login">Login here</a>   
+                            </div>                      
+                        </div>
+                     </fieldset>
+                 </form>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

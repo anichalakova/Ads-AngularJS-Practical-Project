@@ -2,17 +2,19 @@
     box-sizing: border-box;
     color: #333 !important;
 }
-
-/*div{
+/*
+div{
     border: 1px solid black;
-}*/
-
-.view {
-    min-height: 800px;
 }
+
+*/
 
 .wrapper {
     margin-top: 65px;    
+}
+
+.filters, .login, .register {
+    margin-top: 80px;
 }
 
 .row {
@@ -125,6 +127,7 @@ footer p {
     background-color: #A3DAA3;
     font-weight: bold;
     padding: 10px;
+    
 }
 
 .title-bar a {

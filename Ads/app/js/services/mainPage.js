@@ -31,7 +31,7 @@ app.factory('mainData', function($http, $log){
         },
         
         register: function(success) {
-            $http ({method: 'POST', url: 'http://softuni-ads.azurewebsites.net/api/user/register', username})
+            $http ({method: 'POST', url: 'http://softuni-ads.azurewebsites.net/api/user/register'});
         }
     };
     
