@@ -24,7 +24,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <label for="inputPassConf" class="control-label">Confirm Password</label>
-                                <input type="password" class="form-control" id="inputPassConf" placeholder="Confirm Password">
+                                <input type="password" class="form-control" id="inputPassConf" placeholder="Confirm Password" ng-model="user.confirmPassword">
                             </div>
                         </div> 
                         <div class="form-group">
@@ -44,7 +44,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <label for="selectTown" class="control-label">Town</label>
-                                <select class="form-control" id="selectTown" ng-options="town.id as town.name for town in towns" ng-model="user.TownId">
+                                <select class="form-control" id="selectTown" ng-options="town.id as town.name for town in towns" ng-model="user.townId">
                                   </select>
                             </div>
                         </div> 
