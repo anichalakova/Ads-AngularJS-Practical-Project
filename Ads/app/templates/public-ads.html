@@ -1,0 +1,40 @@
+<div class="ads">  
+    <div class="row">           
+        <div class=" ads-holder">
+            <ul>
+                <li class="item" ng-repeat="item in data.ads">
+                    <div class="container title">
+                        <h3 class="pull-left">
+                            {{item.title}}                           
+                        </h3>
+                            <span class="pull-right">
+                                   {{item.date | date: 'd-MMM-yyyy'}}
+                            </span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 photo">
+                            <img class="ad-image" src="" ng-src="{{item.imageDataUrl}}">
+                        </div>
+                        <div class="col-md-7 text">
+                            {{item.text}}
+                            <div class="row">
+                                <div class="col-md-4 user-data">
+                                    <p>Name:</p>
+                                    <p>Email:</p>
+                                    <p>Phone:</p>
+                                </div>
+                                <div class="col-md-8 user-data">
+                                    <p>{{item.ownerName}}</p>
+                                    <p>{{item.ownerEmail}}</p>
+                                    <p>{{item.ownerPhone}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+

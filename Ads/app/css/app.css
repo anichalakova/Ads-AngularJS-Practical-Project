@@ -10,10 +10,11 @@ div{
 */
 
 .wrapper {
-    margin-top: 65px;    
+    margin-top: 80px; 
+    min-height: 500px;
 }
 
-.filters, .login, .register {
+.filters, .login, .register, .ads {
     margin-top: 80px;
 }
 
