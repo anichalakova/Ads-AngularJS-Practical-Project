@@ -132,5 +132,14 @@ footer p {
 }
 
 .title-bar a {
-    text-decoration: none;
+    text-decoration: none;  
+    font-weight: bold;
+    font-size: 2em;
+    font-style: italic;
+}
+
+.title-bar {
+    background-color: #A3DAA3;  
+    
+    
 }
