@@ -23,6 +23,20 @@ div{
     padding: 0;
 }
 
+.navbar-right span{
+    font-size: 1.3em;
+    font-style: italic;
+    margin-right: 10px;
+}
+
+.navbar-right a:link{
+    font-size: 1.2em;
+    text-decoration: underline;
+    
+}
+
+
+
 .fixed-sidebar {
     position: fixed;
     top: 80px;
@@ -115,14 +129,6 @@ button[type="submit"]:hover{
     border-color: #ADADAD;
 }
 
-a:link {
-    text-decoration: underline;
-}
-
-a:hover {
-    text-decoration: none;    
-}
-
 footer p {
     text-align: center;
     background-color: #A3DAA3;
@@ -131,15 +137,13 @@ footer p {
     
 }
 
-.title-bar a {
-    text-decoration: none;  
+.title-bar a:first-child {    
     font-weight: bold;
     font-size: 2em;
     font-style: italic;
 }
 
 .title-bar {
-    background-color: #A3DAA3;  
-    
+    background-color: #A3DAA3;    
     
 }
