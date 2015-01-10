@@ -22,29 +22,31 @@ app.controller('FiltersController', ['$scope', '$rootScope', 'filtersData', 'fil
 //            });
 //    }
     
+    $scope.selectedCatId = null;
     
+    function setSelectedCat(category) {
+       $scope.selectedCatId = category.id;
+    };
+    
+    $scope.selectedTownId = null;
+    
+    function setSelectedTown(town) {
+       $scope.selectedTownId = town.id;
+    };  
     
     $scope.categoryClicked = function categoryClicked (category) {
+        setSelectedCat(category);
         filter.filterByCategory(category);
         $rootScope.$broadcast('categoryClicked', category);
     };
     
     $scope.townClicked = function townClicked (town) {
         filter.filterByTown(town);
+        setSelectedTown(town);
         $rootScope.$broadcast('townClicked', town);
     };
     
-    $scope.selectedCatId = null;
-    
-    $scope.setSelectedCat = function (selectedId) {
-       $scope.selectedCatId = selectedId;
-    };
-    
-    $scope.selectedTownId = null;
-    
-    $scope.setSelectedTown = function (selectedId) {
-       $scope.selectedTownId = selectedId;
-    };
+
 }]);
 
 
