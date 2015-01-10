@@ -1,0 +1,25 @@
+<div id="wrapper">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container title-bar">        
+           <a href="../" class="navbar-brand">Ani's Ads - {{pageTitle}}</a>
+           <div class='navbar-right' ng-if="isLoggedIn">
+               <span>{{username}}</span>
+               <a href="../" ng-click="logout()">Logout</a>
+           </div>
+         </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <div ng-include="'templates/left-public-sidebar.html'"  ng-if="!isLoggedIn"></div>
+            <div ng-include="'templates/left-user-sidebar.html'"  ng-if="isLoggedIn"></div>
+        </div>
+         <div class="col-md-7">
+             <public-ads></public-ads>
+        </div>
+         <div class="col-md-3">
+             <filters></filters>
+           
+        </div>
+    </div>
+    
+</div>
