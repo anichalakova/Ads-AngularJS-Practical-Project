@@ -3,16 +3,12 @@ app.controller('HomeController', ['$scope', 'authentication', 'userData', functi
     $scope.pageTitle = 'Home';
     $scope.isLoggedIn = authentication.isLogged();
     $scope.username = authentication.setUsername();
-    
-   
-
-
-
-
-    
-    
+    $scope.logout = userData.logout();
+     
     $scope.selectedLink = 'home';
     $scope.setSelectedNav = function (linkName) {
-       $scope.selectedLink = linkName;
+    $scope.selectedLink = linkName;
     };
+   
+
 }]);
