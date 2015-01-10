@@ -5,7 +5,7 @@ app.controller('PublicAdsController', ['$scope', 'adsData', 'filter', function($
 //                    $scope.adsData = data;
 //                });   
     
-    function loadPublicAds(filterParams){
+    function loadPublicAds(filterParams){        
         filterParams = filterParams || {};
         adsData.getPublicAds(filterParams)
                 .$promise
@@ -15,6 +15,13 @@ app.controller('PublicAdsController', ['$scope', 'adsData', 'filter', function($
     }
 
     loadPublicAds();
+    
+    
+//    
+//    $scope.loadPublicAds = function (){
+//        console.log("loadPublicAdsClicked");
+//            loadPublicAds();
+//    }
         
     $scope.$on('categoryClicked', function (event, category){
         loadPublicAds(filter.getFilterParams());

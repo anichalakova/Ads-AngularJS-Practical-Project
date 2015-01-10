@@ -25,13 +25,22 @@ app.controller('FiltersController', ['$scope', '$rootScope', 'filtersData', 'fil
     $scope.selectedCatId = null;
     
     function setSelectedCat(category) {
-       $scope.selectedCatId = category.id;
+            if (category) {
+                $scope.selectedCatId = category.id;
+            } else {
+                $scope.selectedCatId = null;
+            }
+       
     };
     
     $scope.selectedTownId = null;
     
     function setSelectedTown(town) {
-       $scope.selectedTownId = town.id;
+       if (town) {
+                $scope.selectedTownId = town.id;
+            } else {
+                $scope.selectedTownId = null;
+            }
     };  
     
     $scope.categoryClicked = function categoryClicked (category) {
