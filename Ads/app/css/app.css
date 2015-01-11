@@ -130,11 +130,11 @@ button[type="submit"]:hover{
 }
 
 footer p {
+    margin-top: 20px;
     text-align: center;
     background-color: #A3DAA3;
     font-weight: bold;
-    padding: 10px;
-    
+    padding: 10px;    
 }
 
 .title-bar a:first-child {    

@@ -10,7 +10,7 @@ app.config(['$routeProvider', 'localStorageServiceProvider', function($routeProv
     $routeProvider.when('/', {
         templateUrl: '/templates/home.html', controller: 'HomeController' });
     $routeProvider.when('/user/ads/publish', {
-        templateUrl: 'templates/user/publish-new-ad.html', controller: 'UserPublishNewAdController'});
+        templateUrl: 'templates/publish-new-ad.html', controller: 'UserPublishNewAdController'});
     $routeProvider.otherwise({redirectTo: '/'});
     
 

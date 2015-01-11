@@ -3,34 +3,42 @@
            <div class="container title-bar">        
                <a href="../" class="navbar-brand">Ani's Ads - {{pageTitle}}</a>
             </div>
-    </div>
-    <div class="bs-docs-section">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="well bs-component">
-                    <form class="form-horizontal">
-                        <fieldset>
-                            <legend>Login</legend>
-                            <div class="form-group">
-                                <label for="username" class="col-lg-2 control-label">Username</label>
-                                <div class="col-lg-10">
-                                    <input type="text" class="form-control" id="username" placeholder="Username" ng-model="user.username">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-                                <div class="col-lg-10">
-                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="user.password">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-lg-10 col-lg-offset-2">
-                                    <button class="btn btn-default">Cancel</button>
-                                    <button type="submit" class="btn btn-primary" ng-click="login(user)">Submit</button>
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
+    </div>    
+     <div class="row">
+        <div class="col-md-2">
+            <div ng-include="'templates/left-public-sidebar.html'"  ng-if="!isLoggedIn"></div>
+            <div ng-include="'templates/left-user-sidebar.html'"  ng-if="isLoggedIn"></div>
+        </div>
+         <div class="col-md-10">
+            <div class="bs-docs-section">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="well bs-component">
+                            <form class="form-horizontal">
+                                <fieldset>
+                                    <legend>Login</legend>
+                                    <div class="form-group">
+                                        <label for="username" class="col-lg-2 control-label">Username</label>
+                                        <div class="col-lg-10">
+                                            <input type="text" class="form-control" id="username" placeholder="Username" ng-model="user.username" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                                        <div class="col-lg-10">
+                                            <input type="password" class="form-control" id="inputPassword" placeholder="Password" ng-model="user.password" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-lg-10 col-lg-offset-2">
+                                            <a href="#/register" class="btn btn-default">Register here</a>
+                                            <button type="submit" class="btn btn-primary" ng-click="login(user)">Login</button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
