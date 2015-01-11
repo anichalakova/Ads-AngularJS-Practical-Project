@@ -14,7 +14,7 @@ app.factory('authentication', [function(){
         var headers = {};
         var userData = getUserData();
             if (userData) {
-                headers.Authorization = 'Bearer' + getUserData().access_token;
+                headers.Authorization = 'Bearer ' + getUserData().access_token;
             }        
             return headers;
     }

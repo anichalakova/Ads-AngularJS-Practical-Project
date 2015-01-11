@@ -21,7 +21,7 @@ app.config(['$routeProvider', 'localStorageServiceProvider', function($routeProv
 
 app.run(function ($rootScope, $location, authentication) {
   $rootScope.$on('$locationChangeStart', function (event) {
-    if ($location.path().indexOf("/user/") != -1 && !authentication.isLogged()) {
+    if ($location.path().indexOf("/user/") !== -1 && !authentication.isLogged()) {
       // Authorization check: anonymous site visitors cannot access user routes
       $location.path("/");
     }

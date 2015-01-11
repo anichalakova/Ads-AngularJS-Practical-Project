@@ -23,7 +23,7 @@
                                                 <label for="title">Title:</label>                                           
                                             </div>
                                             <div class="col-md-10">
-                                                <input type="text" id="title" ng-model="adData.title" required />                                       
+                                                <input type="text" id="title" ng-model="adData.title"/>                                       
                                             </div>
                                         </div>
                                     </div>
@@ -72,7 +72,7 @@
                                     <div class="form-group">
                                         <div class="col-lg-10 col-lg-offset-2">
                                             <a href="#" class="btn btn-default">Cancel</a>
-                                            <button type="submit" class="btn btn-primary" ng-click="publishAd()">Publish</button>
+                                            <button type="submit" class="btn btn-primary" ng-click="publishAd(adData)">Publish</button>
                                         </div>
                                     </div>
                                 </fieldset>
