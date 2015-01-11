@@ -5,7 +5,7 @@ app.factory('filter', function(){
         if (category) {
             filterParams.categoryId = category.id;
         }  else {
-            filterParams.categoryId = null;
+            delete filterParams['categoryId'];
         }      
     }
     
@@ -13,7 +13,7 @@ app.factory('filter', function(){
         if (town) {
             filterParams.townId = town.id;
         } else {
-            filterParams.townId = null;
+            delete filterParams['townId'];
         }     
     }
     

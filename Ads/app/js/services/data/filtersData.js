@@ -1,6 +1,6 @@
 app.factory('filtersData', ['$resource', 'baseServiceUrl', function($resource, baseServiceUrl){
         
-    function getAllTowns(){      
+    function getTowns(){      
         var resource = $resource(baseServiceUrl + 'towns');
         return resource.query();
     }
@@ -11,7 +11,7 @@ app.factory('filtersData', ['$resource', 'baseServiceUrl', function($resource, b
     }
     
     return {
-        getTowns: getAllTowns,
+        getTowns: getTowns,
         getCategories : getCategories
     };
 }]);

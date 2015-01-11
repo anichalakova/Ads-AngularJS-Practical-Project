@@ -1,7 +1,8 @@
 <div class="ads">  
     <div class="row">           
         <div class=" ads-holder">
-            <ul>
+            <img src="images/loading.gif" ng-hide="ready" width="100px"/>
+            <ul ng-cloak>
                 <li class="item" ng-repeat="item in adsData.ads">
                     <div class="container title">
                         <h3 class="pull-left">
@@ -34,6 +35,20 @@
                 </li>
             </ul>
         </div>
+<!--        <pagination page="startPage" 
+                    ng-model="currentPage" 
+                    total-items="adsData.numItem" 
+                    ng-change="pageChanged()" 
+                     items-per-page="pageSize">
+        </pagination>-->
+        <pagination 
+            total-items="adsData.numItems" 
+            ng-model="adsParams.startPage"
+            items-per-page="adsParams.pageSize" 
+            ng-change="reloadAds()"
+            max-size="9" 
+            boundary-links="true">
+        </pagination>
     </div>
 </div>
 

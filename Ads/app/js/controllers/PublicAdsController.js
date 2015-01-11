@@ -1,27 +1,26 @@
 app.controller('PublicAdsController', ['$scope', 'adsData', 'filter', function($scope, adsData, filter){      
-//    adsData.getPublicAds()
-//                .$promise
-//                .then(function(data){
-//                    $scope.adsData = data;
-//                });   
+    'use strict'; 
     
-    function loadPublicAds(filterParams){        
+    $scope.ready = false;
+  
+    function loadPublicAds(filterParams){   
+       // console.log(filterParams);
         filterParams = filterParams || {};
         adsData.getPublicAds(filterParams)
                 .$promise
                 .then(function(data){
                     $scope.adsData = data;
+                    $scope.ready = true;
                 });
     }
 
     loadPublicAds();
     
-    
-//    
-//    $scope.loadPublicAds = function (){
-//        console.log("loadPublicAdsClicked");
-//            loadPublicAds();
-//    }
+
+    $scope.pageChanged = function(){
+        filter.setPageParams({startPage: $scope.currentPage, pageSize: numItems / numPages});
+        adsData.getPublicAds(filter.getFilterParams());
+    };
         
     $scope.$on('categoryClicked', function (event, category){
         loadPublicAds(filter.getFilterParams());
@@ -29,5 +28,6 @@ app.controller('PublicAdsController', ['$scope', 'adsData', 'filter', function($
     
     $scope.$on('townClicked', function (event, town){
         loadPublicAds(filter.getFilterParams());
-    }); 
+    });   
+    
 }]);

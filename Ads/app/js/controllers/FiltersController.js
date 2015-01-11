@@ -1,3 +1,5 @@
+'use strict';
+
 app.controller('FiltersController', ['$scope', '$rootScope', 'filtersData', 'filter', function($scope, $rootScope, filtersData, filter){   
     
     filtersData.getTowns()

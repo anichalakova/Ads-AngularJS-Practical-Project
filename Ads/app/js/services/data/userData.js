@@ -34,8 +34,8 @@ app.factory('userData', ['$resource', 'baseServiceUrl', 'authentication', functi
     }
     
      function logoutUser(){
- console.log('logout');
-   // delete localStorage['user'];
+        console.log('logout');
+        delete localStorage['user'];
 //        var resource = $resource(baseServiceUrl + 'user/logout') 
 //                .save(user);
 //        

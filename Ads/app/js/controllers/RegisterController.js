@@ -1,3 +1,5 @@
+'use strict';
+
 app.controller('RegisterController', ['$scope', '$location', 'filtersData', 'userData', function($scope, $location, filtersData, userData){   
     
     $scope.pageTitle = 'Register';
