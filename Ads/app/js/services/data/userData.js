@@ -1,13 +1,4 @@
-app.factory('userData', ['$resource', 'baseServiceUrl', 'authentication', function($resource, baseServiceUrl, authentication){
-            
-//    function registerUser(user){        
-//        return $resource(baseServiceUrl + 'user/register') 
-//                .save(user)
-//                .$promise
-//                .then(function (data){
-//                    authentication.saveUser(data);   
-//                });
-//    }        
+app.factory('userData', ['$resource', 'baseServiceUrl', 'authentication', function($resource, baseServiceUrl, authentication){      
     
     function registerUser(user){
         var resource = $resource(baseServiceUrl + 'user/register') 
@@ -27,24 +18,15 @@ app.factory('userData', ['$resource', 'baseServiceUrl', 'authentication', functi
         
         resource.$promise
             .then(function (data){
-                authentication.saveUser(data);   
+                authentication.saveUser(data);                  
             });
 
          return resource;
     }
     
      function logoutUser(){
-        console.log('logout');
+        showInfoMessage('You have logged out successfully!');
         delete localStorage['user'];
-//        var resource = $resource(baseServiceUrl + 'user/logout') 
-//                .save(user);
-//        
-//        resource.$promise
-//            .then(function (){
-//                authentication.removeUser();   
-//            });
-//
-//         return resource;
     }
     
    return {

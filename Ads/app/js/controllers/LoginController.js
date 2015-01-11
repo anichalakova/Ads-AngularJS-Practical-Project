@@ -10,6 +10,7 @@ app.controller('LoginController', ['$scope', '$location', 'userData', function($
                 .then(function(data){
                     $location.path('/');
                     $scope.isLoggedIn = true;
+                    showInfoMessage('Welcome!');
                 });
-    }
+    };
 }]);

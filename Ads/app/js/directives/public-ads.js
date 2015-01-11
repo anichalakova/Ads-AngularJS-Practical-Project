@@ -3,7 +3,7 @@ app.directive('publicAds', function(){
             controller: 'PublicAdsController',
             restrict: 'E',
             templateUrl: 'templates/public-ads.html',
-            replace: true,
-        }
+            replace: true
+        };
     }        
 );

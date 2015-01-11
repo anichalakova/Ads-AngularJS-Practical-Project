@@ -3,7 +3,7 @@ app.directive('filters', function(){
             controller: 'FiltersController',
             restrict: 'E',
             templateUrl: 'templates/filters.html',
-            replace: true,
-        }
+            replace: true
+        };
     }        
 );

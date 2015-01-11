@@ -14,15 +14,6 @@ app.controller('FiltersController', ['$scope', '$rootScope', 'filtersData', 'fil
             .then(function(data){
                 $scope.categories = data;
             });
-
-//    function loadCategories(params){
-//        var params = params || {};
-//            filtersData.getCategories()
-//            .$promise
-//            .then(function(data){
-//                $scope.categories = data;
-//            });
-//    }
     
     $scope.selectedCatId = null;
     
@@ -56,8 +47,6 @@ app.controller('FiltersController', ['$scope', '$rootScope', 'filtersData', 'fil
         setSelectedTown(town);
         $rootScope.$broadcast('townClicked', town);
     };
-    
-
 }]);
 
 
